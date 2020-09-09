@@ -17,7 +17,6 @@ pub trait Join {
     fn join(slice: &Self) -> Self::Output;
 }
 
-
 #[unstable(feature = "asdfasdfasdfa", issue = "27747")]
 impl<T: Sized + Clone> Join for Foo<T> {
     type Output = Vec<T>;
