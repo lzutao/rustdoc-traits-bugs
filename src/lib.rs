@@ -1,3 +1,3 @@
-#![feature(asdfasdfasdfa)]
+#![feature(extremely_unstable_foo)]
 
 pub use unstabled::Join;
