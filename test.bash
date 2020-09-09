@@ -10,7 +10,7 @@ set -ex
 # trait_join=$sharedir/doc/rust/html/alloc/slice/trait.Join.html
 
 # hack, unreliable
-index=$(cargo doc --open 2>&1| rg inde | awk '{print $2}')
+index=$(cargo doc --open 2>&1| grep inde | awk '{print $2}')
 
 trait_path=(dirname $index)/trait.Join.html
 
