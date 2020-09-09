@@ -9,32 +9,20 @@ pub struct Foo<T: Sized + Clone> {
 }
 
 #[unstable(feature = "asdfasdfasdfa", issue = "27747")]
-pub trait Search {}
-
-/// Helper trait for [`[T]::join`](../../std/primitive.slice.html#method.join)
-#[unstable(feature = "asdfasdfasdfa", issue = "27747")]
-pub trait Join<Separator> {
+pub trait Join {
     #[unstable(feature = "asdfasdfasdfa", issue = "27747")]
-    /// The resulting type after concatenation
-    type Output: Search;
+    type Output;
 
-    /// Implementation of [`[T]::join`](../../std/primitive.slice.html#method.join)
     #[unstable(feature = "asdfasdfasdfa", issue = "27747")]
-    fn join(slice: &Self, sep: Separator) -> Self::Output;
+    fn join(slice: &Self) -> Self::Output;
 }
 
-#[unstable(feature = "asdfasdfasdfa", issue = "27747")]
-pub struct Bar<T> {
-    bar: T,
-}
-
-impl<T> Search for Bar<T> {}
 
 #[unstable(feature = "asdfasdfasdfa", issue = "27747")]
-impl<T: Sized + Clone> Join<&T> for Foo<T> {
-    type Output = Bar<T>;
+impl<T: Sized + Clone> Join for Foo<T> {
+    type Output = Vec<T>;
 
-    fn join(slice: &Self, sep: &T) -> Bar<T> {
+    fn join(slice: &Self) -> Vec<T> {
         unimplemented!()
     }
 }
