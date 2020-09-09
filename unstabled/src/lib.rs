@@ -1,4 +1,4 @@
-#![no_std]
+#![crate_name = "unstabled"]
 #![feature(staged_api)]
 #![unstable(feature = "thisisnotreal", issue = "27747")]
 
