@@ -12,6 +12,6 @@ set -ex
 # hack, unreliable
 index=$(cargo doc --open 2>&1| grep inde | awk '{print $2}')
 
-trait_path=(dirname $index)/trait.Join.html
+trait_path=$(dirname $index)/trait.Join.html
 
 exec grep -qF impl-Join $trait_path
