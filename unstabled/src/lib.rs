@@ -1,23 +1,23 @@
 #![crate_name = "unstabled"]
 #![feature(staged_api)]
-#![unstable(feature = "thisisnotreal", issue = "27747")]
+#![unstable(feature = "extremely_unstable", issue = "none")]
 
-#[unstable(feature = "asdfasdfasdfa", issue = "27747")]
+#[unstable(feature = "extremely_unstable_foo", issue = "none")]
 pub struct Foo<T: Sized + Clone> {
-    #[unstable(feature = "asdfasdfasdfa", issue = "27747")]
+    #[unstable(feature = "extremely_unstable_foo", issue = "none")]
     bytes: [T],
 }
 
-#[unstable(feature = "asdfasdfasdfa", issue = "27747")]
+#[unstable(feature = "extremely_unstable_foo", issue = "none")]
 pub trait Join {
-    #[unstable(feature = "asdfasdfasdfa", issue = "27747")]
+    #[unstable(feature = "extremely_unstable_foo", issue = "none")]
     type Output;
 
-    #[unstable(feature = "asdfasdfasdfa", issue = "27747")]
+    #[unstable(feature = "extremely_unstable_foo", issue = "none")]
     fn join(slice: &Self) -> Self::Output;
 }
 
-#[unstable(feature = "asdfasdfasdfa", issue = "27747")]
+#[unstable(feature = "extremely_unstable_foo", issue = "none")]
 impl<T: Sized + Clone> Join for Foo<T> {
     type Output = Vec<T>;
 
