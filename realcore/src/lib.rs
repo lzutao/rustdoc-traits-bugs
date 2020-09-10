@@ -1,4 +1,4 @@
-#![crate_name = "unstabled"]
+#![crate_name = "realcore"]
 #![feature(staged_api)]
 #![unstable(feature = "extremely_unstable", issue = "none")]
 

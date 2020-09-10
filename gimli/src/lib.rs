@@ -5,4 +5,4 @@
 pub struct EndianSlice;
 
 #[unstable(feature = "rustc_private", issue = "none")]
-impl unstabled::Deref for EndianSlice {}
+impl realcore::Deref for EndianSlice {}

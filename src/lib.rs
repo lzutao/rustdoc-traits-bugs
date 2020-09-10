@@ -2,7 +2,7 @@
 
 #[allow(unused)]
 extern crate gimli;
-extern crate unstabled;
+extern crate realcore;
 
-pub use unstabled::Deref;
-pub use unstabled::Join;
+pub use realcore::Deref;
+pub use realcore::Join;
