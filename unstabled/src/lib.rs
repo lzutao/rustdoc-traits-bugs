@@ -25,3 +25,6 @@ impl<T: Sized + Clone> Join for Foo<T> {
         unimplemented!()
     }
 }
+
+#[stable(feature = "faked_deref", since = "1.47.0")]
+pub trait Deref {}
